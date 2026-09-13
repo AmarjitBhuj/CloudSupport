@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CloudSupport | Support Center</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="container nav-content">
+            <div class="logo">
+                <span class="logo-icon">☁</span>
+                CloudSupport
+            </div>
+
+            <a href="#track" class="nav-link">Track Request</a>
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero">
+            <div class="container hero-content">
+
+                <div class="hero-text">
+                    <span class="badge">AWS SERVERLESS SUPPORT</span>
+
+                    <h1>
+                        We're here to
+                        <span>help.</span>
+                    </h1>
+
+                    <p>
+                        Submit your support request and receive a unique
+                        request ID. You can use it anytime to track your
+                        request status.
+                    </p>
+
+                    <div class="hero-features">
+                        <div>
+                            <strong>⚡ Fast</strong>
+                            <span>Instant request creation</span>
+                        </div>
+
+                        <div>
+                            <strong>🔒 Secure</strong>
+                            <span>Serverless AWS backend</span>
+                        </div>
+
+                        <div>
+                            <strong>📋 Trackable</strong>
+                            <span>Check your request anytime</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-card">
+                    <div class="cloud-illustration">☁</div>
+                    <h3>Need assistance?</h3>
+                    <p>
+                        Tell us what's happening and our support
+                        workflow will take care of the rest.
+                    </p>
+
+                    <a href="#submit" class="primary-button">
+                        Create a Request →
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- SUBMIT REQUEST -->
+        <section class="section" id="submit">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-label">01 — SUPPORT</span>
+                    <h2>Submit a support request</h2>
+                    <p>
+                        Provide the details below and we'll create
+                        a unique request ID for you.
+                    </p>
+                </div>
+
+                <div class="form-card">
+
+                    <form id="supportForm">
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    placeholder="Your name"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    placeholder="you@example.com"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="category">Category</label>
+
+                                <select id="category" required>
+                                    <option value="">Select category</option>
+                                    <option value="Technical Issue">
+                                        Technical Issue
+                                    </option>
+                                    <option value="Billing">
+                                        Billing
+                                    </option>
+                                    <option value="Account">
+                                        Account
+                                    </option>
+                                    <option value="General">
+                                        General
+                                    </option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="priority">Priority</label>
+
+                                <select id="priority" required>
+                                    <option value="">Select priority</option>
+                                    <option value="Low">Low</option>
+                                    <option value="Medium">Medium</option>
+                                    <option value="High">High</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="description">Description</label>
+
+                                <textarea
+                                    id="description"
+                                    rows="6"
+                                    maxlength="1000"
+                                    placeholder="Describe your issue in detail..."
+                                    required
+                                ></textarea>
+
+                                <div class="character-count">
+                                    <span id="characterCount">0</span>/1000
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="primary-button submit-button"
+                            id="submitButton"
+                        >
+                            Submit Request →
+                        </button>
+
+                        <div id="submitMessage" class="message"></div>
+
+                    </form>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- TRACK REQUEST -->
+        <section class="section track-section" id="track">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-label">02 — TRACK</span>
+                    <h2>Track your request</h2>
+                    <p>
+                        Enter the request ID you received after submission.
+                    </p>
+                </div>
+
+                <div class="track-card">
+
+                    <div class="track-form">
+                        <input
+                            type="text"
+                            id="requestId"
+                            placeholder="Example: CS-20260913-14F64"
+                        >
+
+                        <button
+                            type="button"
+                            class="primary-button"
+                            id="trackButton"
+                        >
+                            Track Request
+                        </button>
+                    </div>
+
+                    <div id="trackMessage" class="message"></div>
+
+                    <div
+                        id="requestResult"
+                        class="request-result hidden"
+                    ></div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <div class="container footer-content">
+            <div>
+                <strong>CloudSupport</strong>
+                <p>Serverless support management system.</p>
+            </div>
+
+            <div class="footer-tech">
+                AWS · Lambda · API Gateway · DynamoDB · S3
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
